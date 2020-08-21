@@ -27,7 +27,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>First Name</label>
+                                <label>First Name<span class="required-span">*</span></label>
                                 <input type="text" name="first_name" class="form-control {{ $errors->has('first_name') ? 'is-invalid' : '' }}" placeholder="Enter First Name" value="{{ old('first_name', '') }}" required>
                                 @if($errors->has('first_name'))
                                 <div class="invalid-feedback">
@@ -38,7 +38,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Last Name</label>
+                                <label>Last Name<span class="required-span">*</span></label>
                                 <input type="text" name="last_name" class="form-control {{ $errors->has('last_name') ? 'is-invalid' : '' }}" placeholder="Enter Last Name" value="{{ old('last_name', '') }}" required>
                                 @if($errors->has('last_name'))
                                 <div class="invalid-feedback">
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                                 <div class="form-group">
-                                    <label for="address">Address</label>
+                                    <label for="address">Address<span class="required-span">*</span></label>
                                     <input type="text" class="form-control {{ $errors->has('address') ? 'is-invalid' : '' }}" name="address" value="{{ old('address', '') }}">
                                     @if($errors->has('address'))
                                         <div class="invalid-feedback">
@@ -58,7 +58,7 @@
                                     @endif
                                 </div>
                                 <div class="form-group">
-                                    <label for="course">Course</label>
+                                    <label for="course">Course<span class="required-span">*</span></label>
                                     <select class="form-control {{ $errors->has('course') ? 'is-invalid' : '' }}" name="course_id" value="{{ old('course', '') }}">
                                         <option value="">--</option>
                                         @foreach ($courses as $course)

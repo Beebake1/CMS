@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="{{ asset('plugins/fontawesome/css/all.css')}}">
   <link rel="stylesheet" href="{{ asset('css/adminlte.css')}}">
+  <link rel="stylesheet" href="{{ asset('css/style.css')}}">
    <link rel="stylesheet" href="{{ asset('plugins/font-awsome/css/all.min.css') }}">
    <link rel="stylesheet" href="{{ asset('plugins/select2/css/select2.css') }}">
    <link rel="stylesheet" href="{{ asset('plugins/select2-bootstrap4-theme/select2-bootstrap4.css') }}">
