@@ -74,6 +74,18 @@
                                     @endforeach
                                 </td>
                             </tr>
+                            <tr>
+                                <th>
+                                    Files
+                                </th>
+                                <td>
+                                    @foreach ($assignment->assignment_files as $file)
+                            <div class="col-md-4">
+                                <a href="{{ asset('storage/'.$file->file) }}" target="_blank">{{ $file->file_name }}</a>
+                            </div>
+                        @endforeach
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <div class="form-group">

@@ -15,9 +15,6 @@ class StoreAssignmentRequest extends FormRequest
             'description' => [
                 'required',
             ],
-            'student' => [
-                'required',
-            ],
             'course' => [
                 'required',
             ],

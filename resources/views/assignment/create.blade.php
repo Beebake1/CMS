@@ -35,7 +35,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="description">Description<span class="required-span">*</span></label>
-                                    <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" id="editor" value="{{ old('description', '') }}"></textarea>
+                                    <textarea class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" name="description" >{{ old('description', '') }}</textarea>
                                     @if($errors->has('description'))
                                         <div class="invalid-feedback">
                                             {{ $errors->first('description') }}
@@ -56,7 +56,9 @@
                                     <select class="form-control {{ $errors->has('course') ? 'is-invalid' : '' }}" name="course" value="{{ old('course', '') }}">
                                         <option value="">--</option>
                                         @foreach ($courses as $course)
-                                        <option value="{{ $course->id }}">{{ $course->title }}</option>
+                                        <option @if ( old('course')  == $course->id )
+                                            selected
+                                        @endif value="{{ $course->id }}">{{ $course->title }}</option>
                                         @endforeach
                                     </select>
                                     @if($errors->has('course'))
